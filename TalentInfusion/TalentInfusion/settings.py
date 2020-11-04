@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'app_user',
     'app_contact',
     'app1',
     'app_about',
@@ -79,10 +80,14 @@ WSGI_APPLICATION = 'TalentInfusion.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'DB_talentinfusion',
+        'USER': 'postgres',
+        'PASSWORD': 'jaydeep',
+        'HOST': 'localhost',
     }
 }
+
 
 
 # Password validation
